@@ -208,6 +208,18 @@ namespace BitmapNet.Tests
         }
 
         [TestMethod]
+        public void SetRangeFalse()
+        {
+            this.bitmap.SetAllBits(true);
+            const int RANGE_START = 0;
+            const int RANGE_END = 68;
+            this.bitmap.SetRange(RANGE_START, RANGE_END, false);
+            Assert.IsTrue(Enumerable.SequenceEqual(
+                Enumerable.Range(RANGE_END + 1, this.bitmap.Length - RANGE_END - 1),
+                this.bitmap.GetTrueBits()));
+        }
+
+        [TestMethod]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void SetRangeOutOfRangeTooSmall()
         {

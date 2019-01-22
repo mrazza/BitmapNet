@@ -238,12 +238,26 @@ namespace BitmapNet
             int endBucket = end / BITS_IN_ULONG;
             int endOffset = end % BITS_IN_ULONG;
 
-            this.bits[startBucket] |= ulong.MaxValue << startOffset;
+            if (value)
+            {
+                this.bits[startBucket] |= ulong.MaxValue << startOffset;
+            }
+            else
+            {
+                this.bits[startBucket] &= ~(ulong.MaxValue << startOffset);
+            }
             for (int bucketIndex = startBucket + 1; bucketIndex < endBucket; bucketIndex++)
             {
-                this.bits[bucketIndex] = ulong.MaxValue;
+                this.bits[bucketIndex] = value ? ulong.MaxValue : ulong.MinValue;
             }
-            this.bits[endBucket] |= ulong.MaxValue >> (BITS_IN_ULONG - endOffset - 1);
+            if (value)
+            {
+                this.bits[endBucket] |= ulong.MaxValue >> (BITS_IN_ULONG - endOffset - 1);
+            }
+            else
+            {
+                this.bits[endBucket] &= ~(ulong.MaxValue >> (BITS_IN_ULONG - endOffset - 1));
+            }
 
             return this;
         }
@@ -261,23 +275,17 @@ namespace BitmapNet
             for (int bucketIndex = 0; bucketIndex < this.bits.Length; bucketIndex++)
             {
                 var bucket = this.bits[bucketIndex];
-                if (bucket == 0)
-                {
-                    continue;
-                }
-
-                ulong bucketScan = bucket;
                 int bitIndex = 0;
-                do
+                while (bucket > 0 && ((bucketIndex * BITS_IN_ULONG) + bitIndex) < this.Length)
                 {
-                    if ((bucketScan & 0x1) > 0)
+                    if ((bucket & 0x1) > 0)
                     {
                         trueBits.Add((bucketIndex * BITS_IN_ULONG) + bitIndex);
                     }
 
-                    bucketScan = bucketScan >> 1;
+                    bucket = bucket >> 1;
                     bitIndex++;
-                } while (bucketScan > 0);
+                }
             }
 
             return trueBits;
