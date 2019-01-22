@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitmapNet", "BitmapNet\BitmapNet.csproj", "{ADD32192-E17B-4AFC-96B9-1A1A201085D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitmapNet.Test", "BitmapNet.Test\BitmapNet.Test.csproj", "{D049124A-EEBB-4999-BC88-5E884D26495F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ADD32192-E17B-4AFC-96B9-1A1A201085D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADD32192-E17B-4AFC-96B9-1A1A201085D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADD32192-E17B-4AFC-96B9-1A1A201085D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADD32192-E17B-4AFC-96B9-1A1A201085D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D049124A-EEBB-4999-BC88-5E884D26495F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D049124A-EEBB-4999-BC88-5E884D26495F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D049124A-EEBB-4999-BC88-5E884D26495F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D049124A-EEBB-4999-BC88-5E884D26495F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {01C407E5-6AB5-401F-B82E-30AD60B377D4}
+	EndGlobalSection
+EndGlobal
