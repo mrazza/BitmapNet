@@ -1,4 +1,6 @@
 # Bitmap.NET
+[![Build Status](https://travis-ci.org/mrazza/BitmapNet.svg?branch=master)](https://travis-ci.org/mrazza/BitmapNet)
+
 A Bitmap library (think BitArray or Bit Index, not bmp) written in C# with more functionality than the .NET default.
 
 Bitmap.NET runs on .NET Standard 2.0, supports arbitrary bitmap lengths, and supports the following operations:
