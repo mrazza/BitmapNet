@@ -1,4 +1,4 @@
-// <copyright file="Bitmap.cs">
+// <copyright file="BitmapTests.cs">
 // Copyright (c) Matthew Razza All Rights Reserved
 // </copyright>
 
