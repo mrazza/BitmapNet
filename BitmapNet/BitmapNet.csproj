@@ -13,6 +13,8 @@
     <RepositoryUrl></RepositoryUrl>
     <PackageTags>C#, bitmap, bitarray, bit, index</PackageTags>
     <PackageId>Bitmap.Net</PackageId>
+    <Version>1.0.1</Version>
+    <AssemblyVersion>1.0.1.0</AssemblyVersion>
   </PropertyGroup>
 
 </Project>
