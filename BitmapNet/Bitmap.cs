@@ -208,7 +208,7 @@ namespace BitmapNet
         }
 
         /// <summary>
-        /// Sets a range og bits to the specified value.
+        /// Sets a range of bits to the specified value.
         /// </summary>
         /// <param name="start">The index of the bit at the start of the range (inclusive).</param>
         /// <param name="end">The index of the bit at the end of the range (inclusive).</param>

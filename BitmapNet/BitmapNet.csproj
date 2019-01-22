@@ -2,6 +2,17 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Authors>Matthew Razza</Authors>
+    <Company />
+    <Description>A Bitmap library (think BitArray or Bit Index, not bmp) written in C# with more functionality than the .NET default.</Description>
+    <Copyright>Copyright (c) Matthew Razza</Copyright>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/mrazza/BitmapNet/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/mrazza/BitmapNet</PackageProjectUrl>
+    <RepositoryUrl></RepositoryUrl>
+    <PackageTags>C#, bitmap, bitarray, bit, index</PackageTags>
+    <PackageId>Bitmap.Net</PackageId>
   </PropertyGroup>
 
 </Project>
