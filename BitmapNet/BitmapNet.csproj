@@ -15,6 +15,7 @@
     <PackageId>Bitmap.Net</PackageId>
     <Version>1.0.1</Version>
     <AssemblyVersion>1.0.1.0</AssemblyVersion>
+    <Product>Bitmap.Net</Product>
   </PropertyGroup>
 
 </Project>
