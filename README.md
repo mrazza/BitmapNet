@@ -14,3 +14,5 @@ Bitmap.NET runs on .NET Standard 2.0, supports arbitrary bitmap lengths, and sup
 * Effeciently get the set of all `True` bits
 
 Look at the test for some simple examples.
+
+[nuget](https://www.nuget.org/packages/Bitmap.Net/)
