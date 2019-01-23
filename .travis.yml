@@ -2,8 +2,13 @@ language: csharp
 mono: none
 dotnet: 2.1.502
 solution: BitmapNet.sln
+install:
+  - dotnet tool install --global coveralls.net
+env:
+  global:
+    - DOTNET_CLI_TELEMETRY_OPTOUT: 1
 script:
   - dotnet restore
-  - dotnet test
+  - dotnet test -c Release /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
 after_script:
-   - bash <(curl -s https://codecov.io/bash)
+   - ~/.dotnet/tools/csmacnz.Coveralls --opencover -i ./BitmapNet.Tests/coverage.opencover.xml --repoToken $COVERALLS_REPO_TOKEN --commitId $TRAVIS_COMMIT --commitBranch $TRAVIS_BRANCH --commitAuthor "$REPO_COMMIT_AUTHOR" --commitEmail "$REPO_COMMIT_AUTHOR_EMAIL" --commitMessage "$REPO_COMMIT_MESSAGE" --jobId $TRAVIS_JOB_ID --serviceName "travis-ci" --useRelativePaths
