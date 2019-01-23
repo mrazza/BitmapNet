@@ -8,8 +8,8 @@ env:
 script:
   - dotnet restore
   - dotnet build
-  - dotnet test BitmapNet/BitmapNet.Test/BitmapNet.Test.csproj /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput="`pwd`/"
+  - dotnet test BitmapNet.Test/BitmapNet.Test.csproj /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput="`pwd`/"
 after_success:
- - curl -s https://codecov.io/bash > codecov
- - chmod +x codecov
- - ./codecov -f "./coverage.opencover.xml"
+  - curl -s https://codecov.io/bash > codecov
+  - chmod +x codecov
+  - ./codecov -f "./coverage.opencover.xml"
