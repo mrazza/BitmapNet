@@ -11,4 +11,4 @@ script:
   - dotnet restore
   - dotnet test -c Release /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
 after_script:
-   - ~/.dotnet/tools/csmacnz.Coveralls --opencover -i ./BitmapNet.Tests/coverage.opencover.xml --repoToken $COVERALLS_REPO_TOKEN --commitId $TRAVIS_COMMIT --commitBranch $TRAVIS_BRANCH --commitAuthor "$REPO_COMMIT_AUTHOR" --commitEmail "$REPO_COMMIT_AUTHOR_EMAIL" --commitMessage "$REPO_COMMIT_MESSAGE" --jobId $TRAVIS_JOB_ID --serviceName "travis-ci" --useRelativePaths
+  - bash <(curl -s https://codecov.io/bash)
