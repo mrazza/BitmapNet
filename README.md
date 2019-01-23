@@ -1,5 +1,5 @@
-# Bitmap.NET
-[![Build Status](https://travis-ci.org/mrazza/BitmapNet.svg?branch=master)](https://travis-ci.org/mrazza/BitmapNet)
+# Bitmap.NET [![Build Status](https://travis-ci.org/mrazza/BitmapNet.svg?branch=master)](https://travis-ci.org/mrazza/BitmapNet) [![nuget](https://img.shields.io/nuget/v/Bitmap.Net.svg)](https://www.nuget.org/packages/Bitmap.Net/)
+
 
 A [bitmap](https://en.wikipedia.org/wiki/Bit_array) library (think [BitArray](https://docs.microsoft.com/en-us/dotnet/api/system.collections.bitarray), [BitVector32](https://docs.microsoft.com/en-us/dotnet/api/system.collections.specialized.bitvector32), or Bit Index -- not bmp) written in C# with more functionality than the .NET library options.
 
@@ -14,5 +14,3 @@ Bitmap.NET runs on .NET Standard 2.0, supports arbitrary bitmap lengths, and sup
 * Effeciently get the set of all `True` bits
 
 Look at the test for some simple examples.
-
-[nuget](https://www.nuget.org/packages/Bitmap.Net/)
