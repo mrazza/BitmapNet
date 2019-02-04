@@ -11,6 +11,6 @@ Bitmap.NET runs on .NET Standard 2.0, supports arbitrary bitmap lengths, and sup
 * Invert the bitmap
 * Set a range of bits to a value
 * Set all bits to a value
-* Effeciently get the set of all `True` bits
+* Efficiently get the set of all `True` bits
 
 Look at the test for some simple examples.
